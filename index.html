@@ -121,6 +121,33 @@
     .nav-links a:hover{color:var(--maroon-700);}
   }
 
+  /* ---------- INSTITUTIONAL BAR ---------- */
+  .institutional-bar{
+    background:var(--paper);border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .institutional-bar .wrap{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    text-align:center;flex-wrap:wrap;
+  }
+  .institutional-bar img{height:38px;width:auto;flex:none;}
+  .institutional-bar .divider{width:1px;height:28px;background:var(--line);flex:none;}
+  .institutional-bar p{
+    font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--ink-soft);
+    max-width:52ch;
+  }
+  .institutional-bar strong{color:var(--maroon-700);}
+  @media (max-width:560px){ .institutional-bar .divider{display:none;} }
+
+  /* ---------- OFFICIAL CARD (que-es) ---------- */
+  .official-card{
+    margin-top:24px;display:flex;gap:18px;align-items:center;
+    padding:20px;border-radius:16px;border:1px solid var(--line);background:var(--cream-hi);
+  }
+  .official-card img{height:64px;width:auto;flex:none;}
+  .official-card h4{font-size:14.5px;font-weight:800;color:var(--ink);}
+  .official-card p{margin-top:4px;font-size:13.5px;color:var(--ink-soft);}
+
   /* ---------- HERO ---------- */
   .hero{padding:64px 0 48px;}
   .hero-grid{
@@ -200,10 +227,6 @@
     display:block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:28px;color:var(--maroon-700);
   }
   .stat span{font-size:13px;color:var(--ink-soft);}
-  .trust-line{
-    margin-top:24px;display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink-soft);
-    padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--paper);
-  }
 
   /* ---------- FEATURES ---------- */
   .features-section{background:var(--maroon-900);color:#fff;}
@@ -273,6 +296,14 @@
     <a class="btn btn-primary" href="https://go.bizne.mx/betowa" target="_blank" rel="noopener">Descargar app</a>
   </div>
 </header>
+
+<div class="institutional-bar">
+  <div class="wrap">
+    <img src="ssc-logo.png" alt="Secretaría de Seguridad Ciudadana de la Ciudad de México">
+    <span class="divider"></span>
+    <p><strong>Programa oficial</strong> en alianza con la Secretaría de Seguridad Ciudadana de la Ciudad de México, exclusivo para elementos de la Policía Auxiliar.</p>
+  </div>
+</div>
 
 <main>
   <section class="hero">
@@ -375,7 +406,13 @@
           <div class="stat"><b>0</b><span>efectivo necesario para pagar tu comida</span></div>
           <div class="stat"><b>100%</b><span>desde tu celular, sin trámites en ventanilla</span></div>
         </div>
-        <div class="trust-line">🛡️ Programa respaldado por la SSC, exclusivo para elementos de la Policía Auxiliar.</div>
+        <div class="official-card">
+          <img src="ssc-logo.png" alt="Secretaría de Seguridad Ciudadana de la Ciudad de México">
+          <div>
+            <h4>Programa oficial de la SSC CDMX</h4>
+            <p>PA Aliméntate opera en alianza directa con la Secretaría de Seguridad Ciudadana, exclusivo para elementos activos de la Policía Auxiliar.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -421,8 +458,8 @@
       <div class="faq">
         <details class="faq-item" open>
           <summary>¿Quién puede usar PA Aliméntate? <span class="chev">+</span></summary>
-          <div class="faq-a">Los elementos activos de la Policía Auxiliar de la Ciudad de México, dentro del programa
-            en alianza con la SSC. Te registras con tu número de elemento.</div>
+          <div class="faq-a">Los elementos activos de la Policía Auxiliar de la Ciudad de México. Es un programa oficial,
+            operado en alianza directa con la Secretaría de Seguridad Ciudadana. Te registras con tu número de elemento.</div>
         </details>
         <details class="faq-item">
           <summary>¿Cuándo puedo empezar a usar mi saldo? <span class="chev">+</span></summary>
@@ -465,6 +502,9 @@
 <footer>
   <div class="wrap foot-row">
     <div class="brand" style="font-size:15px;"><img class="brand-mark" style="height:26px;" src="logo-pa-oficial.png" alt="PA Aliméntate"> Aliméntate · un programa de Bizne</div>
-    <div>En alianza con la Secretaría de Seguridad Ciudadana de la CDMX</div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span>Programa oficial en alianza con</span>
+      <img src="ssc-logo.png" alt="Secretaría de Seguridad Ciudadana de la Ciudad de México" style="height:30px;width:auto;">
+    </div>
   </div>
 </footer>
